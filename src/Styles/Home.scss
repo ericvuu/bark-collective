@@ -1,0 +1,52 @@
+@use "../Variables" as *;
+
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background: url("/src/assets/Images/Homepage/home-hero.jpg") center/cover
+    no-repeat;
+  padding: clamp(3rem, 6vh, 6.94vw) 3vw 0;
+  z-index: 1;
+  color: #ffffff;
+
+  @media (min-width: 720px) {
+    background-attachment: fixed;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
+
+  .home-hero-content {
+    position: relative;
+    padding: 10vw 2vw;
+    text-align: center;
+    height: 100%;
+
+    .hero-heading {
+      font-size: clamp(4rem, 10vw, 10rem);
+      margin-bottom: 10vw;
+    }
+
+    .hero-subtext {
+      font-size: clamp(1.5rem, 5vw, 3.5rem);
+
+      @media (min-width: 1024px) {
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: left;
+      }
+    }
+  }
+}

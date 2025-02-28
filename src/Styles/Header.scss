@@ -1,0 +1,51 @@
+@use "../Variables" as *;
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  width: 100%;
+  z-index: 99;
+  transition: transform 0.3s ease;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+
+  .header-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    img {
+      width: 85px;
+
+      @media (max-width: 600px) {
+        width: 60px;
+      }
+    }
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+    .login {
+      font-family: "Signika-Bold";
+      font-size: 2rem;
+      text-decoration: none;
+      color: #ffff;
+      padding: .8rem 2rem;
+      background-color: $primary;
+      border-radius: 7px;
+
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+  }
+}

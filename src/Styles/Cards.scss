@@ -1,0 +1,81 @@
+@use "../Variables" as *;
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #d3d3d3;
+  }
+
+  .card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    .card-title {
+      font-size: 2.25rem;
+      font-weight: 600;
+      color: $primary;
+      margin-bottom: 0.5rem;
+      text-transform: capitalize;
+    }
+
+    .card-description {
+      font-size: 1.3rem;
+      color: $secondary;
+      margin-bottom: 5px;
+
+      &:last-of-type {
+        margin-bottom: 15px;
+      }
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .card-button {
+        padding: 0.5rem 1rem;
+        background-color: $primary;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+          background-color: $secondary;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@use "./Variables" as *;
+@use "./Styles/Cards.scss" as *;
+@use "../src/Styles/Header.scss" as *;
+@use "../src/Styles/Home.scss" as *;
+@use "../src/Styles/Login.scss" as *;
+@use "../src/Styles/Search.scss" as *;
+@use "../src/Styles/Match.scss" as *;
+
+@font-face {
+  font-family: "Lato";
+  src: url("/Fonts/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("/Fonts/Lato-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-Italic";
+  src: url("/Fonts/Lato-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cabin";
+  src: url("/Fonts/Cabin-Variable.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cabin-Italic";
+  src: url("/Fonts/Cabin-Italic.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cabin";
+}
+
+body {
+  font-family: "Lato-Regular";
+  background-color: $background;
+}
+
+.page {
+  min-height: 60vh;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.status {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .container {
+    max-width: 1200px;
+  }
+}
