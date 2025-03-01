@@ -256,6 +256,7 @@
   @media (max-width: 768px) {
     .fields-container {
       justify-content: space-between;
+      flex-direction: column;
     }
 
     select {
@@ -264,11 +265,14 @@
     }
 
     .zip-popup {
-      width: 90%;
-      padding: 1rem;
+      width: 100%;
+      min-height: 200px;
       top: auto;
       bottom: 0;
-      margin-left: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: auto !important;
+      margin-right: auto !important;
 
       .zip-popup-content {
         input[type="text"] {
